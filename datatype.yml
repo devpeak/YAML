@@ -1,0 +1,61 @@
+#Strings representation
+
+name: "Malay"
+jobrole: devops
+salary: '90k'
+
+#here Malay,devops,90k all are variables
+
+#storing data in multiple lines
+
+bio: | 
+Hey i am Malay Thakur.
+I am a nice dude.
+
+#write a single line in multiple lines
+
+message: >
+Wake up,
+Study hard,
+Get a job,
+make your parents proud.
+
+#this is similar to 
+
+message: Wake up,Study hard,Get a job,make your parents proud.
+
+#YAML automatically detect the type of data type
+number: 574
+cgpa: 7.3
+booleanValue: No #n , False, N, False, FALSE
+
+#same for true -> y, yes, Yes , YES
+
+#YAML can detect the type automatically but one can specify the type 
+
+zero: !!int 0 
+postiveNum: !!int 69
+negativeNum: !!int -45
+binaryNum: !!int 0b1101
+octalNum: !!int 06543
+hexa: !!int 0x45
+commaValue: !!int +690_000 #690,000
+exponential numbers: 0.007E3
+#floating point numbers
+marks: !!float 69.69
+infinite: !!float .inf
+
+not a num: .nan 
+
+booleanVal: !!bool No
+
+salary: !!str how about 1.5lakh per month 
+
+#null datatypes
+surname: !!null #NULL, ~
+
+#DATES AND TIME
+
+date: !!timestamp 2023-02-22 #YYYY-MM-DD
+india time: 2023-02-22T22:00:00 + 5:30
+no time zone: 2023-02-22T22:00:00
