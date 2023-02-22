@@ -1,0 +1,16 @@
+
+{   
+    
+    "States":[
+        "Bihar",
+        "Jharkhand",
+        "Hyderabad"
+    ],
+    "comments": "this a way to add comments in json- difference between yaml and json while writing key value pair is in json key should be in string data type",
+    
+    "name":"Malay",
+    "enrollment_no": "201b149",
+    "branch":"cse"
+    
+
+}
