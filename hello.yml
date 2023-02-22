@@ -1,0 +1,49 @@
+#store data in key-value pair
+
+"apple": "red fruit"
+149 : "Malay's Roll number"
+
+---
+
+#lists are represented using the dash or hyphen
+
+- apple
+- mango
+- banana
+
+---
+#yaml is case sensitive, apple and Apple both are different
+
+- apple
+- Apple 
+
+---
+
+# Block Style - use spaces not tabs, spaces and indentation are important 
+
+States : 
+ - Bihar
+ - jharkhand
+ - Hyderabad
+
+----
+
+#storing data in single line - to avoid indentation issue
+#this is similar to json
+cities: [Bengaluru,Mumbai]
+
+---
+
+{name : "Malay", roll_no: "201b149", branch : "cse" } #check this in json 
+...
+#differentiate between different documents - How yaml understand in above code that documents are different ?
+#for example in above code how yaml understand that data is key value pair or list or block 
+
+#using ---
+
+#now yaml will understand that it has 4 different documents seperated by ---
+
+#now to tell yaml that document is finished use ...
+
+
+#COMMENTS- YAML doesn't support multililne comment
