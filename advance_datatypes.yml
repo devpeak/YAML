@@ -58,7 +58,6 @@ pair examples: !!pairs
 #same as
 pair example: !!pairs [job: student, job: teacher]
 #this'll an array of hastables
-
 #set will allow you to have unique values
 #cant have the 2 kunal here, do not allow same multiple values
 
