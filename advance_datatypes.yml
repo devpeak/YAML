@@ -1,0 +1,114 @@
+student: !!seq
+ -name
+ -enrollment_no
+ -branch
+
+#can be written as
+
+student: [name,enrollment_no,branch]
+
+#SPARSE SEQUENCE: some of the keys of the sequence will be empty
+
+sparse seq:
+ - hey
+ - how
+ -
+ - NULL
+ - sup
+
+#nested sequence
+
+-
+ - bmw
+ - lamborghini
+ - buggati
+-
+ - dubai
+ - brazil
+ - pune
+
+# key:value pairs are called maps
+!!map
+
+name : "Malay"
+roll_no: "201b149"
+branch : "cse" 
+
+
+#nested mapping: map within map
+
+name: Malay Thakur
+role:
+  job: student
+  domain: devops
+
+#same as
+name: Malay Thakur
+role: {job: student, domain: devops}
+
+#Important
+
+#pairs: keys may have duplicate values
+# !!pairs
+
+pair examples: !!pairs
+ - job: student
+ - job: teacher
+
+#same as
+pair example: !!pairs [job: student, job: teacher]
+#this'll an array of hastables
+
+#set will allow you to have unique values
+#cant have the 2 kunal here, do not allow same multiple values
+
+names: !!set
+ ? kunal
+ ? Malay 
+ ? Rahul
+
+#dictionary !!omap
+
+people: !!omap
+  - Malay:
+     enrollment_no: 201b149
+     branch: cse
+     eyes: black
+     age: 20
+  - Pranjal:
+     enrollment_no: 201b187
+     branch: cse
+     eyes: green
+     age: 22
+
+#Reusing some properties using anchors
+
+likings: &likes
+ fav fruits: mango
+ fav dish: chicken
+
+#say malay , aman and rahul have same liking 
+#but copying or writin the same thhing will be hectic
+
+person1:
+  name: Malay Thakur
+  <<: *likes 
+
+
+#here <<: *likes copy and paste in the sequence
+#fav fruits: mango
+#fav dish: chicken
+
+#overwritting
+
+person2: 
+  name: Pranjal Pandey
+  <<: *likes
+  fav dish: Paneer
+
+#this will look like
+
+person2:
+  name: Pranjal Pandey
+  fav fruits: mango
+  fav dish: Paneer
