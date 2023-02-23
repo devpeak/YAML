@@ -1,0 +1,8 @@
+---
+School:
+ name: DAV
+ principal: mr verma
+ students:
+  - rno: 149
+    name: Malay
+    marks: 72
