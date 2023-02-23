@@ -3,7 +3,7 @@
 <h2 align="left-center">What is YAML?</h2>
 <ol>
 <li>YAML, short for "YAML Ain't Markup Language" emphasizes that YAML is for data, not documents. </li>
-<li>It is a human-readable <a href="bottom">data serialization language</a>.</li>
+<li>It is a human-readable data serialization language.</li>
 <li>It was designed to be easy to read and write, making it a popular choice for configuration files and data exchange between applications.</li>
 </ol>
 
